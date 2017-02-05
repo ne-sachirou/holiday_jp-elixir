@@ -18,6 +18,9 @@ defmodule HolidayJp.Mixfile do
   end
 
   defp deps do
-    [{:yaml_elixir, "~> 1.3"}]
+    [
+      {:dogma, "~> 0.1", only: :dev},
+      {:yaml_elixir, "~> 1.3"},
+    ]
   end
 end

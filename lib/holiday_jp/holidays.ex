@@ -57,12 +57,12 @@ defmodule HolidayJp.Holidays do
            date = Date.from_iso8601! date_str
            week_num = Date.day_of_week date
            %HolidayJp.Holiday{
-	     date: date,
-	     name: name,
-	     name_en: @holiday_names[name],
-	     week: elem(@weeks, week_num - 1),
-	     week_en: elem(@weeks_en, week_num - 1),
-	   }
+             date: date,
+             name: name,
+             name_en: @holiday_names[name],
+             week: elem(@weeks, week_num - 1),
+             week_en: elem(@weeks_en, week_num - 1),
+           }
          end)
       |> Enum.sort(&(Date.compare(&1.date, &2.date) == :lt))
     {:ok, holidays}
