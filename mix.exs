@@ -45,13 +45,12 @@ defmodule HolidayJp.Mixfile do
       maintainers: ["ne_Sachirou <utakata.c4se@gmail.com>"],
       links: %{
         "GitHub": "https://github.com/ne-sachirou/holiday_jp-elixir",
-        "Doc": "https://hexdocs.pm/holiday_jp",
       },
       files: [
-        "holiday_jp/holidays.yml",
         "lib",
         "LICENSE",
         "mix.exs",
+        "priv",
         "README.md",
       ],
     ]

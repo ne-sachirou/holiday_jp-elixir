@@ -49,9 +49,9 @@ defmodule HolidayJp.Holidays do
 
   def init([]) do
     holidays =
-      __ENV__.file
-      |> Path.dirname
-      |> Path.join("../../holiday_jp/holidays.yml")
+      :holiday_jp
+      |> :code.priv_dir
+      |> Path.join("holidays.yml")
       |> YamlElixir.read_from_file
       |> Enum.map(fn {date_str, name} ->
            date = Date.from_iso8601! date_str
