@@ -19,7 +19,7 @@ defmodule HolidayJp.Mixfile do
 
   def application do
     [
-      extra_applications: [:yaml_elixir],
+      extra_applications: [],
       mod: {HolidayJp.Application, []}
     ]
   end
@@ -28,7 +28,7 @@ defmodule HolidayJp.Mixfile do
     [
       {:dogma, "~> 0.1", only: :dev},
       {:ex_doc, "~> 0.14", only: :dev},
-      {:yaml_elixir, "~> 1.3"},
+      {:yaml_elixir, "~> 1.3", only: :dev},
     ]
   end
 
