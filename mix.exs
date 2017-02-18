@@ -3,7 +3,7 @@ defmodule HolidayJp.Mixfile do
 
   def project do
     [app: :holiday_jp,
-     version: "0.1.2",
+     version: "0.2.1",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -47,6 +47,7 @@ defmodule HolidayJp.Mixfile do
       links: %{
         "GitHub": "https://github.com/ne-sachirou/holiday_jp-elixir",
       },
+      files: ["LICENSE", "README.md", "mix.exs", "priv", "lib/holiday_jp.ex", "lib/holiday_jp"]
     ]
   end
 end
