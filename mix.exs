@@ -26,6 +26,7 @@ defmodule HolidayJp.Mixfile do
 
   defp deps do
     [
+      {:dialyxir, "~> 0.4", only: :dev},
       {:dogma, "~> 0.1", only: :dev},
       {:ex_doc, "~> 0.14", only: :dev},
       {:yaml_elixir, "~> 1.3", only: :dev},
