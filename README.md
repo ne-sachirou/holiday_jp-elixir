@@ -45,6 +45,12 @@ true
 
 iex> HolidayJp.holiday? ~D[2016-01-02]
 false
+
+iex> HolidayJp.on ~D[2017-02-11]
+[%HolidayJp.Holiday{date: ~D[2017-02-11], name: "建国記念の日", name_en: "National Foundation Day", week: "土", week_en: "Saturday"}]
+
+iex> HolidayJp.on ~D[2017-02-13]
+[]
 ```
 
 Docs: [https://hexdocs.pm/holiday_jp](https://hexdocs.pm/holiday_jp)

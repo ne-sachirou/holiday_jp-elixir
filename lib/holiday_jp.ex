@@ -28,4 +28,17 @@ defmodule HolidayJp do
   def holiday?(date) do
     HolidayJp.Holidays.holiday? date
   end
+
+  @doc """
+  Returns a list of holidays on the date.
+
+      iex> HolidayJp.on ~D[2017-02-11]
+      [%HolidayJp.Holiday{date: ~D[2017-02-11], name: "建国記念の日", name_en: "National Foundation Day", week: "土", week_en: "Saturday"}]
+
+      iex> HolidayJp.on ~D[2017-02-13]
+      []
+  """
+  def on(date) do
+    HolidayJp.Holidays.between date, date
+  end
 end
