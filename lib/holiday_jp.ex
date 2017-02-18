@@ -3,6 +3,9 @@ defmodule HolidayJp do
   Japanese holiday.
   """
 
+  @type holiday :: %HolidayJp.Holiday{date: %Date{}, name: binary, name_en: binary, week: binary, week_en: binary}
+
+
   @doc """
   Returns holidays in Japan between start and last.
 
@@ -12,7 +15,7 @@ defmodule HolidayJp do
         %HolidayJp.Holiday{date: ~D[2016-03-21], name: "振替休日", name_en: "Holiday in lieu", week: "月", week_en: "Monday"},
       ]
   """
-  @spec between(%Date{}, %Date{}) :: list(%HolidayJp.Holiday{})
+  @spec between(%Date{}, %Date{}) :: list(holiday)
   def between(start, last) do
     HolidayJp.Holidays.between start, last
   end
@@ -40,7 +43,7 @@ defmodule HolidayJp do
       iex> HolidayJp.on ~D[2017-02-13]
       []
   """
-  @spec on(%Date{}) :: list(%HolidayJp.Holiday{})
+  @spec on(%Date{}) :: list(holiday)
   def on(date) do
     HolidayJp.Holidays.between date, date
   end
