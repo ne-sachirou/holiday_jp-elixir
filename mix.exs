@@ -14,7 +14,8 @@ defmodule HolidayJp.Mixfile do
      name: "HolidayJp",
      source_url: "https://github.com/ne-sachirou/holiday_jp-elixir",
      homepage_url: "https://hexdocs.pm/holiday_jp",
-     docs: [main: "HolidayJp"]]
+     docs: [main: "README",
+            extras: ["README.md"]]]
   end
 
   def application do

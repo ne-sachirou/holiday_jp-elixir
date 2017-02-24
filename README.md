@@ -5,7 +5,7 @@ Japanese holiday.
 [![Hex.pm](https://img.shields.io/hexpm/v/holiday_jp.svg)](https://hex.pm/packages/holiday_jp)
 [![Build Status](https://travis-ci.org/ne-sachirou/holiday_jp-elixir.svg?branch=master)](https://travis-ci.org/ne-sachirou/holiday_jp-elixir)
 
-This is an Elixir port of [holiday-jp/holiday_jp-ruby](https://github.com/holiday-jp/holiday_jp-ruby) and [holiday-jp/holiday_jp-php](https://github.com/holiday-jp/holiday_jp-php), using holiday data of [holiday-jp/holiday_jp](https://github.com/holiday-jp/holiday_jp).
+This is an Elixir port of [holiday-jp/holiday_jp-ruby](https://github.com/holiday-jp/holiday_jp-ruby), using holiday data of [holiday-jp/holiday_jp](https://github.com/holiday-jp/holiday_jp).
 
 Installation
 --
@@ -13,7 +13,7 @@ Add `holiday_jp` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:holiday_jp, "~> 0.1"}]
+  [{:holiday_jp, "~> 0.2"}]
 end
 ```
 
@@ -52,5 +52,3 @@ iex> HolidayJp.on ~D[2017-02-11]
 iex> HolidayJp.on ~D[2017-02-13]
 []
 ```
-
-Docs: [https://hexdocs.pm/holiday_jp](https://hexdocs.pm/holiday_jp)
