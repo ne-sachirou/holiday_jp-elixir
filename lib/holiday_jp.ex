@@ -5,7 +5,6 @@ defmodule HolidayJp do
 
   @type holiday :: %HolidayJp.Holiday{date: %Date{}, name: binary, name_en: binary, week: binary, week_en: binary}
 
-
   @doc """
   Returns holidays in Japan between start and last.
 
