@@ -6,8 +6,8 @@ defmodule HolidayJp.Holiday do
   @doc """
   Holiday.
 
-      iex> %HolidayJp.Holiday{date: ~D[2017-11-23], name: "勤労感謝の日", name_en: "Labor Thanksgiving Day", week: "木", week_en: "Thursday"}
-      %HolidayJp.Holiday{date: ~D[2017-11-23], name: "勤労感謝の日", name_en: "Labor Thanksgiving Day", week: "木", week_en: "Thursday"}
+      iex> %HolidayJp.Holiday{date: ~D[2017-11-23], week: "木", week_en: "Thursday", name: "勤労感謝の日", name_en: "Labor Thanksgiving Day"}
+      %HolidayJp.Holiday{date: ~D[2017-11-23], week: "木", week_en: "Thursday", name: "勤労感謝の日", name_en: "Labor Thanksgiving Day"}
   """
-  defstruct date: ~D[1970-01-01], name: "", name_en: "", week: "", week_en: ""
+  defstruct date: ~D[1970-01-01], week: "", week_en: "", name: "", name_en: ""
 end
