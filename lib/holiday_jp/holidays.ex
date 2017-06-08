@@ -7,12 +7,12 @@ defmodule HolidayJp.Holidays do
     GenServer.start_link __MODULE__, [], name: __MODULE__
   end
 
-  @spec holidays :: list(%HolidayJp.Holiday{})
+  @spec holidays :: [%HolidayJp.Holiday{}]
   def holidays do
     GenServer.call __MODULE__, :holidays
   end
 
-  @spec between(%Date{}, %Date{}) :: list(%HolidayJp.Holiday{})
+  @spec between(%Date{}, %Date{}) :: [%HolidayJp.Holiday{}]
   def between(start, last) do
     GenServer.call __MODULE__, {:between, start, last}
   end

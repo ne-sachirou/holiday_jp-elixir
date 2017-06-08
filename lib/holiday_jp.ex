@@ -14,7 +14,7 @@ defmodule HolidayJp do
         %HolidayJp.Holiday{date: ~D[2016-03-21], week: "月", week_en: "Monday", name: "振替休日", name_en: "Holiday in lieu"},
       ]
   """
-  @spec between(%Date{}, %Date{}) :: list(holiday)
+  @spec between(%Date{}, %Date{}) :: [holiday]
   def between(start, last) do
     HolidayJp.Holidays.between start, last
   end
@@ -42,7 +42,7 @@ defmodule HolidayJp do
       iex> HolidayJp.on ~D[2017-02-13]
       []
   """
-  @spec on(%Date{}) :: list(holiday)
+  @spec on(%Date{}) :: [holiday]
   def on(date) do
     HolidayJp.Holidays.between date, date
   end
