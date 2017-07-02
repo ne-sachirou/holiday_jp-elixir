@@ -9,6 +9,6 @@ defmodule HolidayJp.Application do
       worker(HolidayJp.Holidays, []),
     ]
     opts = [strategy: :one_for_one, name: SampleSup.Supervisor]
-    Supervisor.start_link(children, opts)
+    Supervisor.start_link children, opts
   end
 end

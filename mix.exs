@@ -2,34 +2,38 @@ defmodule HolidayJp.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :holiday_jp,
-     version: "0.2.1",
-     elixir: "~> 1.4",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     description: description(),
-     package: package(),
-     deps: deps(),
-     # Docs
-     name: "HolidayJp",
-     source_url: "https://github.com/ne-sachirou/holiday_jp-elixir",
-     homepage_url: "https://hexdocs.pm/holiday_jp",
-     docs: [main: "README",
-            extras: ["README.md"]]]
+    [
+      app: :holiday_jp,
+      version: "0.2.1",
+      elixir: "~> 1.4",
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
+      description: description(),
+      package: package(),
+      deps: deps(),
+      # Docs
+      name: "HolidayJp",
+      source_url: "https://github.com/ne-sachirou/holiday_jp-elixir",
+      homepage_url: "https://hexdocs.pm/holiday_jp",
+      docs: [
+        main: "README",
+        extras: ["README.md"],
+      ],
+    ]
   end
 
   def application do
     [
       extra_applications: [],
-      mod: {HolidayJp.Application, []}
+      mod: {HolidayJp.Application, []},
     ]
   end
 
   defp deps do
     [
-      {:dialyxir, "~> 0.4", only: :dev},
+      {:dialyxir, "~> 0.5", only: :dev},
       {:dogma, "~> 0.1", only: :dev},
-      {:ex_doc, "~> 0.14", only: :dev},
+      {:ex_doc, "~> 0.16", only: :dev},
       {:yaml_elixir, "~> 1.3", only: :dev},
     ]
   end
@@ -48,7 +52,7 @@ defmodule HolidayJp.Mixfile do
       links: %{
         "GitHub": "https://github.com/ne-sachirou/holiday_jp-elixir",
       },
-      files: ["LICENSE", "README.md", "mix.exs", "priv", "lib/holiday_jp.ex", "lib/holiday_jp"]
+      files: ["LICENSE", "README.md", "mix.exs", "priv", "lib/holiday_jp.ex", "lib/holiday_jp"],
     ]
   end
 end
