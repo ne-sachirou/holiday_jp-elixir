@@ -1,4 +1,4 @@
-defmodule Mix.Tasks.Update.Deps do
+defmodule Mix.Tasks.Update do
   @moduledoc false
   use Mix.Task
 

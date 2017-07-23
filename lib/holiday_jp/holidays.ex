@@ -32,7 +32,8 @@ defmodule HolidayJp.Holidays do
     between_holidays = Enum.filter holidays, fn %{date: date} ->
       comparison_to_start = Date.compare start, date
       comparison_to_last = Date.compare date, last
-      (comparison_to_start == :lt or comparison_to_start == :eq) and (comparison_to_last == :lt or comparison_to_last == :eq)
+      (comparison_to_start == :lt or comparison_to_start == :eq) and
+      (comparison_to_last == :lt or comparison_to_last == :eq)
     end
     {:reply, between_holidays, holidays}
   end

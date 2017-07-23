@@ -2,7 +2,7 @@ CONTRIBUTING
 ==
 Maintenace tasks
 --
-`mix update.deps`
+`mix update`
 Update all dependencies.
 
 `mix generate.holidays`
