@@ -4,24 +4,24 @@ defmodule HolidayJp.Mixfile do
   def project do
     [
       app: :holiday_jp,
-      version: "0.2.2",
-      elixir: "~> 1.4",
       build_embedded: Mix.env == :prod,
-      start_permanent: Mix.env == :prod,
-      description: description(),
-      package: package(),
       deps: deps(),
+      description: description(),
       dialyzer: [
         ignore_warnings: "dialyzer.ignore-warnings",
       ],
+      elixir: "~> 1.4",
+      package: package(),
+      start_permanent: Mix.env == :prod,
+      version: "0.2.2",
       # Docs
-      name: "HolidayJp",
-      source_url: "https://github.com/ne-sachirou/holiday_jp-elixir",
-      homepage_url: "https://hexdocs.pm/holiday_jp",
       docs: [
         main: "readme",
         extras: ["README.md"],
       ],
+      homepage_url: "https://hexdocs.pm/holiday_jp",
+      source_url: "https://github.com/ne-sachirou/holiday_jp-elixir",
+      name: "HolidayJp",
     ]
   end
 
@@ -34,8 +34,8 @@ defmodule HolidayJp.Mixfile do
 
   defp deps do
     [
-      {:ex_doc, "~> 0.17", only: :dev},
-      {:inner_cotton, github: "ne-sachirou/inner_cotton", only: [:dev, :test], runtime: false},
+      {:ex_doc, "~> 0.18", only: :dev},
+      {:inner_cotton, github: "ne-sachirou/inner_cotton", only: [:dev, :test]},
       {:relax_yaml, "~> 0.1", only: :dev},
     ]
   end
