@@ -10,9 +10,16 @@ defmodule HolidayJp.Mixfile do
       dialyzer: [
         ignore_warnings: "dialyzer.ignore-warnings",
       ],
-      elixir: "~> 1.4",
+      elixir: "~> 1.5",
       package: package(),
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test,
+      ],
       start_permanent: Mix.env == :prod,
+      test_coverage: [tool: ExCoveralls],
       version: "0.2.2",
       # Docs
       docs: [
@@ -36,7 +43,7 @@ defmodule HolidayJp.Mixfile do
     [
       {:ex_doc, "~> 0.18", only: :dev},
       {:inner_cotton, github: "ne-sachirou/inner_cotton", only: [:dev, :test]},
-      {:relax_yaml, "~> 0.1", only: :dev},
+      {:relax_yaml, "~> 0.1", only: [:dev, :test]},
     ]
   end
 
