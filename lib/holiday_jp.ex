@@ -5,7 +5,13 @@ defmodule HolidayJp do
 
   alias HolidayJp.Holidays
 
-  @type holiday :: %HolidayJp.Holiday{date: %Date{}, week: binary, week_en: binary, name: binary, name_en: binary}
+  @type holiday :: %HolidayJp.Holiday{
+          date: %Date{},
+          week: binary,
+          week_en: binary,
+          name: binary,
+          name_en: binary
+        }
 
   @doc """
   Returns holidays in Japan between start and last.
@@ -17,7 +23,7 @@ defmodule HolidayJp do
       ]
   """
   @spec between(%Date{}, %Date{}) :: [holiday]
-  def between(start, last), do: Holidays.between start, last
+  def between(start, last), do: Holidays.between(start, last)
 
   @doc """
   Detect the date is a holiday in Japan.
@@ -29,7 +35,7 @@ defmodule HolidayJp do
       false
   """
   @spec holiday?(%Date{}) :: boolean
-  def holiday?(date), do: Holidays.holiday? date
+  def holiday?(date), do: Holidays.holiday?(date)
 
   @doc """
   Returns a list of holidays on the date.
@@ -41,5 +47,5 @@ defmodule HolidayJp do
       []
   """
   @spec on(%Date{}) :: [holiday]
-  def on(date), do: Holidays.between date, date
+  def on(date), do: Holidays.between(date, date)
 end
