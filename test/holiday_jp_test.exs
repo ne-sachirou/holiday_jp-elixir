@@ -17,7 +17,7 @@ defmodule HolidayJpTest do
           date: ~D[2017-01-02],
           week: "月",
           week_en: "Monday",
-          name: "振替休日",
+          name: "元日 振替休日",
           name_en: "Holiday in lieu"
         },
         %HolidayJp.Holiday{
